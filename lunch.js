@@ -1,3 +1,4 @@
+
 /*
  * Modify the contents of the function below, such that:
  *
@@ -14,9 +15,16 @@
  */
 
 const whatToDoForLunch = function(hungry, availableTime) {
-  console.log("I don't know what to do!");
-}
-
+  if (hungry === true && availableTime < 20) {
+    console.log("Pick up a snack or grab something from home!");
+  } else if (hungry === true && (availableTime >= 20 && availableTime <= 30)) {
+    console.log("Take time to cook a tasty meal!");
+  } else if (hungry === true && availableTime > 30) {
+    console.log("Please reconsider as you're in the middle of an intense program!");
+  } else if (hungry === false) {
+    console.log("Please keep on working!");
+  }
+};
 
 /*
  * This is some test runner code that's simply calling our whatToDoForLunch function
